@@ -88,6 +88,11 @@ st <- list(
 
 ## 1. Use an appropriate function to see the components of `st` in a concise way.
 
+```{r}
+
+```
+
+
 ## 2. Use R code to determine the class of each element of `st`.
 
 ## 3. It seems that `starship` and `captain` can be merged into one data frame. Do this now.
