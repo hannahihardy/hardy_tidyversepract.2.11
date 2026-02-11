@@ -64,3 +64,22 @@ round(final, 1)
 ## Question 4
 
 Use and show R coding to calculate the standard deviation for each variable of the data table `mtcars` using the `Special For Loop Method`.
+
+```{r}
+mtcars
+
+listofsd <- list()
+
+for (col in colnames(mtcars)) {
+  listofsd[[col]] <- sd(mtcars[[col]])
+}
+
+listofsd
+```
+
+
+
+
+
+
+
