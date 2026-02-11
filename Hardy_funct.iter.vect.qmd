@@ -89,7 +89,7 @@ st <- list(
 ## 1. Use an appropriate function to see the components of `st` in a concise way.
 
 ```{r}
-
+str(st)
 ```
 
 
