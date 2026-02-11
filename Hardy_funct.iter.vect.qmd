@@ -140,3 +140,19 @@ summary(price_depthmodel)$coefficients["depth", "Pr(>|t|)"]
 
 
 ## 4. Plot `depth` vs `price`, faceting by `color`, including an OLS line. Do the $p$-values in the previous question roughly match what you would expect based on the plots?
+
+```{r}
+ggplot(data = diamonds, mapping = aes(x = depth, y = price)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "orchid") +
+  facet_wrap(~color) +
+  labs(x = "depth", y = "price",
+       title = "Depth vs Price by diamond color") +
+  theme_minimal()
+```
+No, the plots do not match what was indicated by the small p-value. The p-value 
+indicated that depth was a much stronger predictor of diamond price since it was 
+smaller than the alpha level 0.05. However,based on the graphs faceted by diamond 
+color, there is not a strong relationship between the depth and price of diamonds. 
+The regression line is nearly flat or indicates a slight negative relationship 
+in most of these graphs. 
