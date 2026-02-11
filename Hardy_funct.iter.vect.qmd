@@ -120,6 +120,15 @@ diamonds
 
 ## 2. Calculate summary statistics (using `summary()`) for all quantitative variables.
 
+```{r}
+summarystats <- diamonds %>%
+  select(where(is.numeric)) %>%
+  summary()
+
+summarystats
+```
+
+
 ## 3. Fit a linear model of `price` on `depth` and extract the $p$-value for the regression coefficient of `depth`
 
 ## 4. Plot `depth` vs `price`, faceting by `color`, including an OLS line. Do the $p$-values in the previous question roughly match what you would expect based on the plots?
