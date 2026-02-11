@@ -93,4 +93,9 @@ monthlyboxplots
 
 ### Question 4:
 
--   Write only one line of the code to return only the leap years fo years 2024, 3021, 2000 or 1800, 800, 5050, 600 and 7156.
+-   Write only one line of the code to return only the leap years for years 2024, 3021, 2000 or 1800, 800, 5050, 600 and 7156.
+
+```{r}
+keep(c(2024, 3021, 2000, 1800, 800, 5050, 600, 7156), leap_year)
+```
+
