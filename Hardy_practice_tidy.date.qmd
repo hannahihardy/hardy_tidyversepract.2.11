@@ -75,7 +75,8 @@ wmata <- wmata %>%
   filter(!substr(Date, 3, 4) == "04" & !substr(Date, 3, 4) == "05")
 
 monthly <- wmata %>%
-  group_split(month = substr(Date, 6, 7))
+  mutate(month = factor(substr(Date, 6, 7))) %>%
+  group_split(month)
 
 monthly
 
@@ -83,10 +84,12 @@ monthly
 
 ```{r}
 monthlyboxplots <- monthly %>%
-  map(~ggplot(data = .x, aes(x = prop, fill = month)) +
+  map(~ {unique(.x$month)
+  
+  ggplot(data = .x, aes(x = prop, y = month, fill = month)) +
   geom_boxplot() +
-  facet_wrap(~month) +
-  theme_minimal())
+  scale_fill_brewer(palette = "Set3", drop = FALSE) +
+  theme_minimal() })
 
 monthlyboxplots
 ```
