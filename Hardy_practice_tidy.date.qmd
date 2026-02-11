@@ -46,7 +46,20 @@ Given the following dates, compute the difference in **months** and **weeks** be
 
 ```{r}
 sample_dates <- c("2018-03-15", "2020-07-20", "2023-01-10", "2025-09-05")
+
+difference <- sample_dates %>%
+  tibble(dates = .) %>%
+  mutate(monthdiff = interval(dates, lead(dates)) %/% months(1),
+        weekdiff = interval(dates, lead(dates)) / dweeks(1)) %>%
+  drop_na()
+          
+difference
+
 ```
+
+The differences in months between each consecutive pair in this list--2018-03-15, 
+2020-07-20, 2023-01-10, 2025-09-05--are 28, 29, and 31 months. The differences in 
+whole weeks in each consecutive pair are 122, 129, and 138 weeks. 
 
 ### Question 3:
 
