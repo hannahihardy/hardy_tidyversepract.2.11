@@ -56,7 +56,6 @@ hist(means, breaks = 50, col = "lightblue", main = "Distribution of sample means
      xlab = "Sample Mean")
 ```
 
-
 # Exercise 2: Star Trek
 
 For this exercise, load in the following dataset.
@@ -92,18 +91,22 @@ st <- list(
 str(st)
 ```
 
-
 ## 2. Use R code to determine the class of each element of `st`.
 
 ```{r}
 sapply(st, class)
 ```
 
-
 ## 3. It seems that `starship` and `captain` can be merged into one data frame. Do this now.
 
 ```         
 Your `st` list should now look like this:
+```
+
+```{r}
+st_merged <- left_join(st$starship, st$captain, by = c("ID" = "ship"))
+
+st_merged
 ```
 
 # Exercise 3: Diamonds
