@@ -1,0 +1,42 @@
+---
+title: "Function"
+author: "Hannah Hardy"
+format: html
+editor: visual
+---
+
+```{r}
+#| include: false
+
+library(tidyverse)
+```
+
+
+# Exercise Functions:
+
+## Question 1
+
+In three or four sentences, explain why constructing a Function. in order to 
+execute tasks, is beneficial or advantageous.
+
+*Constructing a function is beneficial because it replaces multiple small tasks
+with one complex command to make code look more professional and run efficiently. 
+Without functions, code would be lengthy and difficult to interpret for other users.
+Functions simplify the code so that a complex task can be done with large numbers 
+and/or large amounts of trial runs in a manner that may not be possible to compute by
+hand or non-function code.*
+
+## Question 2
+
+Write a function (using r code and structure demonstrated in class) to calculate a z score for a given observed value, a mean, and a standard deviation value. And then use your function to find a z score for the following problem. (Research the internet to find the formula used to calculate a z score)\
+Observed value = 25.77, mean = 23.54, standard deviation = 2.442
+
+## Question 3
+
+Write a function (using r code and the structure demonstrated in class) to calculate \# the natural log of a number multiplied by the common log of the same number divided by the cube root of a given prime number.\
+Use your function to find the answer if the number to be used for both log expressions is 32 and the given prime number is 11.\
+Also use R code to round your answer to the nearest tenth
+
+## Question 4
+
+Use and show R coding to calculate the standard deviation for each variable of the data table `mtcars` using the `Special For Loop Method`.
